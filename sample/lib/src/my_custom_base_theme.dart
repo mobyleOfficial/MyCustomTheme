@@ -7,7 +7,7 @@ abstract class MyCustomBaseTheme extends MyCustomTheme {
   Color get foreground;
 }
 
-class MyCustomLightTheme extends MyCustomBaseTheme {
+class MyCustomLightTheme implements MyCustomBaseTheme {
   @override
   Color get background => const Color(0xFFFFFFFF);
 
@@ -19,7 +19,7 @@ class MyCustomLightTheme extends MyCustomBaseTheme {
       AppLocalizations.of(context)?.lightThemeTitle ?? "";
 }
 
-class MyCustomDarkTheme extends MyCustomBaseTheme {
+class MyCustomDarkTheme implements MyCustomBaseTheme {
   @override
   Color get background => const Color(0xFF000000);
 
