@@ -1,0 +1,18 @@
+{
+  "appTitle": "my_custom_theme_sample",
+  "@appTitle": {
+    "description": "Title of the application"
+  },
+  "lightThemeTitle": "Light theme",
+  "@lightThemeTitle": {
+    "description": "Title of the light theme"
+  },
+  "darkThemeTitle": "Dark theme",
+  "@darkThemeTitle": {
+    "description": "Title of the dark theme"
+  },
+  "samplePageTitle": "Sample",
+  "@samplePageTitle": {
+    "description": "Title of the sample screen"
+  }
+}

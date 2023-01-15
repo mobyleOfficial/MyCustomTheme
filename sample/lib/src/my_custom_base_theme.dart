@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:my_custom_theme/my_custom_theme.dart';
 
 abstract class MyCustomBaseTheme extends MyCustomTheme {
@@ -14,7 +15,8 @@ class MyCustomLightTheme extends MyCustomBaseTheme {
   Color get foreground => const Color(0xFF000000);
 
   @override
-  String nameOf(BuildContext context) => "Light Theme!";
+  String nameOf(BuildContext context) =>
+      AppLocalizations.of(context)?.lightThemeTitle ?? "";
 }
 
 class MyCustomDarkTheme extends MyCustomBaseTheme {
@@ -25,5 +27,6 @@ class MyCustomDarkTheme extends MyCustomBaseTheme {
   Color get foreground => const Color(0xFFFFFFFF);
 
   @override
-  String nameOf(BuildContext context) => "Dark Theme!";
+  String nameOf(BuildContext context) =>
+      AppLocalizations.of(context)?.darkThemeTitle ?? "";
 }
