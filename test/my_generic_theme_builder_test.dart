@@ -1,14 +1,14 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:my_custom_theme/my_custom_theme.dart';
+import 'package:my_custom_theme/src/my_generic_theme.dart';
+import 'package:my_custom_theme/src/my_generic_theme_builder.dart';
 
-import 'mocks/my_base_theme.dart';
 import 'mocks/my_themes.dart';
 
 void main() {
   final themeList = [
-    LightTheme(),
-    DarkTheme(),
+    GenericA(),
+    GenericB(),
   ];
 
   const placeholder = Placeholder();
@@ -29,7 +29,7 @@ void main() {
     );
 
     expect(
-      MyGenericThemeBuilder.themeListOf<MyCustomBaseTheme>(mockContext),
+      MyGenericThemeBuilder.themeListOf<MyGenericTheme>(mockContext),
       themeList,
     );
   });
@@ -50,7 +50,7 @@ void main() {
     );
 
     expect(
-      MyGenericThemeBuilder.selectedOf<MyCustomBaseTheme>(
+      MyGenericThemeBuilder.selectedOf<MyGenericTheme>(
         mockContext,
         listen: false,
       ),
@@ -76,7 +76,7 @@ void main() {
     MyGenericThemeBuilder.setSelectedOf(themeList.last, context: mockContext);
 
     expect(
-      MyGenericThemeBuilder.selectedOf<MyCustomBaseTheme>(
+      MyGenericThemeBuilder.selectedOf<MyGenericTheme>(
         mockContext,
         listen: false,
       ),

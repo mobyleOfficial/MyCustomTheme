@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:my_custom_theme/my_custom_theme.dart';
+import 'package:my_custom_theme/src/my_custom_theme_builder.dart';
 
 import 'mocks/my_themes.dart';
 

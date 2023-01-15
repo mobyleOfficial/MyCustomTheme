@@ -1,10 +1,10 @@
 import 'package:flutter/widgets.dart';
 import 'package:meta/meta.dart';
-import 'package:my_custom_theme/src/my_custom_theme.dart';
+import 'package:my_custom_theme/src/my_generic_theme.dart';
 import 'package:provider/provider.dart';
 
 @sealed
-class MyGenericThemeBuilder<T extends MyCustomTheme> with ChangeNotifier {
+class MyGenericThemeBuilder<T extends MyGenericTheme> with ChangeNotifier {
   MyGenericThemeBuilder({
     required List<T> themeList,
     T? selected,
@@ -19,7 +19,7 @@ class MyGenericThemeBuilder<T extends MyCustomTheme> with ChangeNotifier {
     notifyListeners();
   }
 
-  static T selectedOf<T extends MyCustomTheme>(
+  static T selectedOf<T extends MyGenericTheme>(
     BuildContext context, {
     bool listen = true,
   }) =>
@@ -28,7 +28,7 @@ class MyGenericThemeBuilder<T extends MyCustomTheme> with ChangeNotifier {
         listen: listen,
       )._selected as T;
 
-  static setSelectedOf<T extends MyCustomTheme>(
+  static setSelectedOf<T extends MyGenericTheme>(
     T selected, {
     required BuildContext context,
   }) {
@@ -38,7 +38,7 @@ class MyGenericThemeBuilder<T extends MyCustomTheme> with ChangeNotifier {
     )._setSelected(selected);
   }
 
-  static List<T> themeListOf<T extends MyCustomTheme>(
+  static List<T> themeListOf<T extends MyGenericTheme>(
     BuildContext context, {
     bool listen = false,
   }) =>
